@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/SchoolsListFragment">
+
+    <fragment
+        android:id="@+id/SchoolsListFragment"
+        android:name="com.example.jpmc.SchoolsListFragment"
+        tools:layout="@layout/school_list_fragment">
+
+        <action
+            android:id="@+id/action_SchoolsListFragment_to_SchoolDetailDialogFragment"
+            app:destination="@id/SchoolDetailDialogFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/SchoolDetailDialogFragment"
+        android:name="com.example.jpmc.SchoolDetailDialogFragment">
+        <argument
+            android:name="schoolId"
+            app:argType="string" />
+    </dialog>
+
+</navigation>
